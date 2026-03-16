@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    front-family: "Poly", sans serif;
+    background-color: #0a0a0a;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-size: cover;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    border-bottom: 2px solid #ffffff29;
+}
+
+.logo {
+    color: #a70a15;
+    font-size: 40px;
+    font-weight: 800;
+
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #ebcb40;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #a70a15;
+
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    display: none;
+    cursor: pointer;
+}
+
+
+p {
+    color: #ffffff; /* <--- Esto solo afectará a las etiquetas <p> */
+}
+
+
+/* Centrar el contenido del Header */
+.header-info {
+    text-align: center; /* Centra el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el bloque en el eje horizontal */
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.header-info h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* Esta es la clase que pone el texto y la imagen de lado */
+.explicacion {
+    display: flex;         /* Activa el modo de lado a lado */
+    align-items: center;   /* Centra verticalmente el texto con la imagen */
+    padding: 50px 0;
+    gap: 40px;            /* Espacio entre el texto y la imagen */
+}
+
+/* Esta clase hace que en la segunda sección se invierta el orden */
+.explicacion.reverse {
+    flex-direction: row-reverse;
+}
+
+
+/* Esta es la clase que pone el texto y la imagen de lado */
+.explicacion {
+    display: flex;         /* Activa el modo de lado a lado */
+    align-items: center;   /* Centra verticalmente el texto con la imagen */
+    padding: 50px 0;
+    gap: 40px;            /* Espacio entre el texto y la imagen */
+}
+
+
+.info-texto {
+    flex: 1;
+    text-align: justify;
+}
+
+.info-texto h2 {
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.info-texto span {
+    color: #a70a15;       /* Color rojo para resaltar palabras */
+}
+
+.info-img {
+    flex: 1;               /* Hace que la imagen ocupe la otra mitad */
+    display: flex;
+    justify-content: center;
+}
+
+.img-f1 {
+    width: 100%;           /* La imagen se adapta al espacio */
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.grupo-fotos {
+    display: flex;
+    gap: 10px;
+}
+
+.grupo-fotos .img-f1 {
+    width: 49%;           /* Si pones dos fotos, se dividen el espacio */
+}
+
+.header.content {
+    padding: 30px;
+
+}
+
+.header-info h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+    justify-content:center;
+}
+
+/* Mantenemos tu clase footer con flex para separar logo de menú */
+.footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 0; /* Un poco más de espacio para que respire */
+    border-top: 2px solid #ffffff29; /* Para que combine con tu menú de arriba */
+}
+
+/* Esto es lo que pone los textos uno al lado del otro */
+.footer .link ul {
+    display: flex;       /* Los pone en fila */
+    list-style: none;    /* Quita los puntos */
+    margin: 0;
+    padding: 0;
+}
+
+/* Espaciado para que no estén pegados */
+.footer .link ul li {
+    margin-left: 20px; 
+}
+
+/* Estilo de los enlaces para que se parezcan a los de arriba */
+.footer .link ul li a {
+    color: #ebcb40;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer .link ul li a:hover {
+    color: #a70a15; /* El rojo que usas en el menú superior */
+}
+
+
+@media (max-width: 991px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .menu {
+        padding: 10px 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0a0a0a;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header-info h1 {
+        font-size: 45px;
+    }
+
+    .explicacion, .explicacion.reverse {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .info-img, .grupo-fotos {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .grupo-fotos .img-f1 {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .footer .link ul li {
+        margin: 0 10px;
+    }
+}
